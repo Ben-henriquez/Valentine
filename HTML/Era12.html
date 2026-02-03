@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Era 12 — The Life of a Showgirl</title>
+  <link rel="stylesheet" href="../Estilos.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="top">
+        <div class="badge"><span class="dot"></span> era 12 · the life of a showgirl</div>
+        <div>★</div>
+      </div>
+
+      <div class="content">
+        <div class="panel">
+          <p class="subtitle">Último acto</p>
+          <h1 class="headline">Vaitiare Berlott…</h1>
+
+          <div class="photo">
+            <img src="../IMG/era12.jpg" alt="Era 12" />
+          </div>
+
+          <p class="desc" style="margin-top:12px;">
+            ¿Te gustaría ser mi valentine este 14 de febrero?
+          </p>
+
+          <div class="actions" id="finalActions">
+            <button class="btn btn-primary" id="yesBtn">Sí 💖</button>
+            <button class="btn btn-secondary" id="noBtn">No 🙈</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div>12 / 12</div>
+        <div>🎭✨</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../Efectos.js"></script>
+  <script>
+    // Botón NO desaparece
+    const noBtn = document.getElementById("noBtn");
+    noBtn?.addEventListener("click", (e) => {
+      e.preventDefault();
+      noBtn.style.display = "none";
+    });
+
+    // Botón SÍ abre WhatsApp hacia TU número
+    const yesBtn = document.getElementById("yesBtn");
+    yesBtn?.addEventListener("click", () => {
+      const phone = "5693695295"; // TU número
+      const msg = encodeURIComponent(
+        "Siii 💖 acepto. Coordinemos hora y lugar ✨"
+      );
+      window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+    });
+  </script>
+</body>
+</html>
