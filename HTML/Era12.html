@@ -29,7 +29,11 @@
           </p>
 
           <div class="actions" id="finalActions">
-            <button class="btn btn-primary" id="yesBtn">Sí 💖</button>
+            <a class="btn btn-primary" id="yesBtn"
+              href="https://wa.me/5693695295?text=Siii%20%F0%9F%92%96%20acepto.%20Coordinemos%20hora%20y%20lugar%20%E2%9C%A8"
+              target="_blank" rel="noopener">
+              Sí 💖
+            </a>
             <button class="btn btn-secondary" id="noBtn">No 🙈</button>
           </div>
         </div>
@@ -51,15 +55,6 @@
       noBtn.style.display = "none";
     });
 
-    // Botón SÍ abre WhatsApp hacia TU número
-    const yesBtn = document.getElementById("yesBtn");
-    yesBtn?.addEventListener("click", () => {
-      const phone = "5693695295"; // TU número
-      const msg = encodeURIComponent(
-        "Siii 💖 acepto. Coordinemos hora y lugar ✨"
-      );
-      window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
-    });
   </script>
 </body>
 </html>
